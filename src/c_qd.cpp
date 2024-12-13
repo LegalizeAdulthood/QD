@@ -12,7 +12,7 @@
  */
 #include <cstring>
 
-#include "config.h"
+#include <qd/config.h>
 #include <qd/qd_real.h>
 #include <qd/c_qd.h>
 

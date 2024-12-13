@@ -16,11 +16,11 @@
 #include <cmath>
 #include <climits>
 
-#include "config.h"
+#include <qd/config.h>
 #include <qd/inline.h>
 #include <qd/bits.h>
 
-#ifdef HAVE_IEEEFP_H
+#if HAVE_IEEEFP_H
 #include <ieeefp.h>
 #endif
 

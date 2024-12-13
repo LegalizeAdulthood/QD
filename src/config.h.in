@@ -2,166 +2,170 @@
 
 /* Define to dummy `main' function (if any) required to link to the Fortran
    libraries. */
-#undef FC_DUMMY_MAIN
+#cmakedefine FC_DUMMY_MAIN
 
 /* Define if F77 and FC dummy `main' functions are identical. */
-#undef FC_DUMMY_MAIN_EQ_F77
+#cmakedefine FC_DUMMY_MAIN_EQ_F77
 
 /* Define to a macro mangling the given C identifier (in lower and upper
    case), which must not contain underscores, for linking with Fortran. */
-#undef FC_FUNC
+#cmakedefine FC_FUNC
 
 /* As FC_FUNC, but for C identifiers containing underscores. */
-#undef FC_FUNC_
+#cmakedefine FC_FUNC_
 
 /* Define to alternate name for `main' routine that is called from a `main' in
    the Fortran libraries. */
-#undef FC_MAIN
+#cmakedefine FC_MAIN
 
 /* Define to 1 if your system has the clock_gettime function. */
-#undef HAVE_CLOCK_GETTIME
+#cmakedefine01 HAVE_CLOCK_GETTIME
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
-#undef HAVE_DLFCN_H
+#cmakedefine01 HAVE_DLFCN_H
 
 /* Define to 1 if Fortran interface is to be compiled. */
-#undef HAVE_FORTRAN
+#cmakedefine01 HAVE_FORTRAN
 
 /* Define to 1 if you have the <fpu_control.h> header file. */
-#undef HAVE_FPU_CONTROL_H
+#cmakedefine01 HAVE_FPU_CONTROL_H
 
 /* Define to 1 if you have the `gettimeofday' function. */
-#undef HAVE_GETTIMEOFDAY
+#cmakedefine01 HAVE_GETTIMEOFDAY
 
 /* Define to 1 if you have the <ieeefp.h> header file. */
-#undef HAVE_IEEEFP_H
+#cmakedefine01 HAVE_IEEEFP_H
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-#undef HAVE_INTTYPES_H
+#cmakedefine01 HAVE_INTTYPES_H
 
 /* Define to 1 if you have the `m' library (-lm). */
-#undef HAVE_LIBM
+#cmakedefine01 HAVE_LIBM
 
 /* Define to 1 if you have the <memory.h> header file. */
-#undef HAVE_MEMORY_H
+#cmakedefine01 HAVE_MEMORY_H
 
 /* Define to 1 if stdbool.h conforms to C99. */
-#undef HAVE_STDBOOL_H
+#cmakedefine01 HAVE_STDBOOL_H
 
 /* Define to 1 if you have the <stdint.h> header file. */
-#undef HAVE_STDINT_H
+#cmakedefine01 HAVE_STDINT_H
 
 /* Define to 1 if you have the <stdlib.h> header file. */
-#undef HAVE_STDLIB_H
+#cmakedefine01 HAVE_STDLIB_H
 
 /* Define to 1 if you have the <strings.h> header file. */
-#undef HAVE_STRINGS_H
+#cmakedefine01 HAVE_STRINGS_H
 
 /* Define to 1 if you have the <string.h> header file. */
-#undef HAVE_STRING_H
+#cmakedefine01 HAVE_STRING_H
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
-#undef HAVE_SYS_STAT_H
+#cmakedefine01 HAVE_SYS_STAT_H
 
 /* Define to 1 if you have the <sys/types.h> header file. */
-#undef HAVE_SYS_TYPES_H
+#cmakedefine01 HAVE_SYS_TYPES_H
 
 /* Define to 1 if you have the <unistd.h> header file. */
-#undef HAVE_UNISTD_H
+#cmakedefine01 HAVE_UNISTD_H
 
 /* Define to 1 if the system has the type `_Bool'. */
-#undef HAVE__BOOL
-
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
-#undef LT_OBJDIR
+#cmakedefine01 HAVE__BOOL
 
 /* qd major version number */
-#undef MAJOR_VERSION
+#cmakedefine MAJOR_VERSION
 
 /* qd minor version number */
-#undef MINOR_VERSION
+#cmakedefine MINOR_VERSION
 
 /* Name of package */
-#undef PACKAGE
+#cmakedefine PACKAGE
 
 /* Define to the address where bug reports for this package should be sent. */
-#undef PACKAGE_BUGREPORT
+#cmakedefine PACKAGE_BUGREPORT
 
 /* Define to the full name of this package. */
-#undef PACKAGE_NAME
+#cmakedefine PACKAGE_NAME
 
 /* Define to the full name and version of this package. */
-#undef PACKAGE_STRING
+#cmakedefine PACKAGE_STRING
 
 /* Define to the one symbol short name of this package. */
-#undef PACKAGE_TARNAME
+#cmakedefine PACKAGE_TARNAME
 
 /* Define to the home page for this package. */
-#undef PACKAGE_URL
+#cmakedefine PACKAGE_URL
 
 /* Define to the version of this package. */
-#undef PACKAGE_VERSION
+#cmakedefine PACKAGE_VERSION
 
 /* qd patch number (sub minor version) */
-#undef PATCH_VERSION
+#cmakedefine PATCH_VERSION
 
 /* Any special symbols needed for exporting APIs. */
-#undef QD_API
+#define QD_API @QD_API@
 
 /* Define this macro to be the copysign(x, y) function. */
-#undef QD_COPYSIGN
+#cmakedefine QD_COPYSIGN
 
 /* Define to 1 to enable debugging code. */
-#undef QD_DEBUG
+#cmakedefine01 QD_DEBUG
 
 /* If fused multiply-add is available, define correct macro for using it. */
-#undef QD_FMA
+#cmakedefine QD_FMA
 
 /* If fused multiply-subtract is available, define correct macro for using it.
    */
-#undef QD_FMS
+#cmakedefine QD_FMS
 
 /* Define to 1 if your compiler have the C++ standard include files. */
-#undef QD_HAVE_STD
+#cmakedefine01 QD_HAVE_STD
 
 /* Define to 1 to use additions with IEEE-style error bounds. */
-#undef QD_IEEE_ADD
+#cmakedefine01 QD_IEEE_ADD
 
 /* Define to 1 to inline commonly used functions. */
-#undef QD_INLINE
+#cmakedefine01 QD_INLINE
 
 /* Define this macro to be the isfinite(x) function. */
-#undef QD_ISFINITE
+#ifndef QD_ISFINITE
+#define QD_ISFINITE @QD_ISFINITE@
+#endif
 
 /* Define this macro to be the isinf(x) function. */
-#undef QD_ISINF
+#ifndef QD_ISINF
+#define QD_ISINF @QD_ISINF@
+#endif
 
 /* Define this macro to be the isnan(x) function. */
-#undef QD_ISNAN
+#ifndef QD_ISNAN
+#define QD_ISNAN @QD_ISNAN@
+#endif
 
 /* Define to 1 to use sloppy division (which is faster by slightly
    inaccurate). */
-#undef QD_SLOPPY_DIV
+#cmakedefine01 QD_SLOPPY_DIV
 
 /* Define to 1 to use sloppy multiplication (which is faster by slightly
    inaccurate). */
-#undef QD_SLOPPY_MUL
+#cmakedefine01 QD_SLOPPY_MUL
 
 /* Set to 1 if using VisualAge C++ compiler for __fmadd builtin. */
-#undef QD_VACPP_BUILTINS_H
+#cmakedefine01 QD_VACPP_BUILTINS_H
 
 /* Define to 1 if you have the ANSI C header files. */
-#undef STDC_HEADERS
+#cmakedefine01 STDC_HEADERS
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
-#undef TIME_WITH_SYS_TIME
+#cmakedefine01 TIME_WITH_SYS_TIME
 
 /* Define to 1 if your <sys/time.h> declares `struct tm'. */
-#undef TM_IN_SYS_TIME
+#cmakedefine01 TM_IN_SYS_TIME
 
 /* Version number of package */
-#undef VERSION
+#cmakedefine VERSION
 
 /* Whether to use x86 fpu fix. */
-#undef X86
+#cmakedefine X86
+
+#define SIZEOF_VOID_P @CMAKE_SIZEOF_VOID_P@

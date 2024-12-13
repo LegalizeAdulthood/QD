@@ -7,7 +7,7 @@
  *
  * Copyright (c) 2000-2007
  */
-#include "config.h"
+#include <qd/config.h>
 #include <qd/dd_real.h>
 
 const dd_real dd_real::_2pi = dd_real(6.283185307179586232e+00,

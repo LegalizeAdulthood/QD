@@ -11,7 +11,8 @@
  * control word of a x86 FPU.
  */
 
-#include "config.h"
+#include <cfenv>
+#include <qd/config.h>
 #include <qd/fpu.h>
 
 #ifdef X86
@@ -55,12 +56,14 @@ void fpu_fix_start(unsigned int *old_cw) {
     *old_cw = cw;
   }
 #else
+#if SIZEOF_VOID_P == 4
   /* Win 32 MSVC */
-  unsigned int cw = _control87(0, 0);
-  _control87(0x00010000, 0x00030000);
+  unsigned int cw = _controlfp(0, 0);
+  _controlfp(_PC_53, _MCW_PC);
   if (old_cw) {
     *old_cw = cw;
   }
+#endif
 #endif
 #else
   /* Linux */
@@ -90,7 +93,9 @@ void fpu_fix_end(unsigned int *old_cw) {
 #else
   /* Win 32 MSVC */
   if (old_cw) {
-    _control87(*old_cw, 0xFFFFFFFF);
+#if SIZEOF_VOID_P == 4
+    _controlfp(*old_cw, 0xFFFFFFFF);
+#endif
   }
 #endif
 
@@ -105,7 +110,7 @@ void fpu_fix_end(unsigned int *old_cw) {
 #endif
 }
 
-#ifdef HAVE_FORTRAN
+#if HAVE_FORTRAN
 
 #define f_fpu_fix_start FC_FUNC_(f_fpu_fix_start, F_FPU_FIX_START)
 #define f_fpu_fix_end   FC_FUNC_(f_fpu_fix_end,   F_FPU_FIX_END)

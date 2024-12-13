@@ -13,7 +13,7 @@
 #ifndef TICTOC_H__
 #define TICTOC_H__
 
-#include "config.h"
+#include <qd/config.h>
 
 #ifdef _WIN32
 

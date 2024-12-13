@@ -18,7 +18,7 @@
 #include <iomanip>
 #include <string>
 
-#include "config.h"
+#include <qd/config.h>
 #include <qd/dd_real.h>
 #include "util.h"
 

@@ -9,7 +9,7 @@
  *
  * Defines constants used in quad-double package.
  */
-#include "config.h"
+#include <qd/config.h>
 #include <qd/qd_real.h>
 
 /* Some useful constants. */
