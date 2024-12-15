@@ -15,7 +15,6 @@
 #define _QD_BITS_H
 
 #include <iostream>
-#include <qd/qd_config.h>
 
 /* Returns the exponent of the double precision number.
    Returns INT_MIN is x is zero, and INT_MAX if x is INF or NaN. */

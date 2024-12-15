@@ -11,26 +11,21 @@
  * number.  This used by the library for debugging purposes.
  */
 
-#include <iostream>
-#include <iomanip>
 #include <cmath>
-#include <climits>
+#include <iomanip>
+#include <iostream>
+#include <limits>
 
 #include <qd/config.h>
-#include <qd/inline.h>
 #include <qd/bits.h>
-
-#if HAVE_IEEEFP_H
-#include <ieeefp.h>
-#endif
 
 using std::setw;
 
 int get_double_expn(double x) {
   if (x == 0.0)
-    return INT_MIN;
+    return std::numeric_limits<int>::min();
   if (QD_ISINF(x) || QD_ISNAN(x))
-    return INT_MAX;
+    return std::numeric_limits<int>::max();
 
   double y = std::abs(x);
   int i = 0;
@@ -82,4 +77,3 @@ void print_double_info(std::ostream &os, double x) {
   os.precision(old_prec);
   os.flags(old_flags);
 }
-
