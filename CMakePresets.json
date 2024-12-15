@@ -21,12 +21,6 @@
       }
     },
     {
-      "name": "vcpkg",
-      "hidden": true,
-      "description": "Configure the toolchain for vcpkg",
-      "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
-    },
-    {
       "name": "default",
       "displayName": "Configure with default settings",
       "inherits": [ "sibling-build-preset", "project-name" ]
