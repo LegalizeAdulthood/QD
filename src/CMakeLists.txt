@@ -1,9 +1,6 @@
 set(QD_API "")
 set(QD_INLINE TRUE)
 set(QD_HAVE_STD TRUE)
-set(QD_ISFINITE "std::isfinite")
-set(QD_ISINF "std::isinf")
-set(QD_ISNAN "std::isnan")
 configure_file(include/qd/qd_config.h.in include/qd/qd_config.h)
 
 set(X86 TRUE)

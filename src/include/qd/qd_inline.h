@@ -68,7 +68,7 @@ inline double &qd_real::operator[](int i) {
 }
 
 inline bool qd_real::isnan() const {
-  return QD_ISNAN(x[0]) || QD_ISNAN(x[1]) || QD_ISNAN(x[2]) || QD_ISNAN(x[3]);
+  return std::isnan(x[0]) || std::isnan(x[1]) || std::isnan(x[2]) || std::isnan(x[3]);
 }
 
 /********** Renormalization **********/
@@ -96,7 +96,7 @@ inline void renorm(double &c0, double &c1,
                    double &c2, double &c3) {
   double s0, s1, s2 = 0.0, s3 = 0.0;
 
-  if (QD_ISINF(c0)) return;
+  if (std::isinf(c0)) return;
 
   s0 = qd::quick_two_sum(c2, c3, c3);
   s0 = qd::quick_two_sum(c1, s0, c2);
@@ -128,7 +128,7 @@ inline void renorm(double &c0, double &c1,
                    double &c2, double &c3, double &c4) {
   double s0, s1, s2 = 0.0, s3 = 0.0;
 
-  if (QD_ISINF(c0)) return;
+  if (std::isinf(c0)) return;
 
   s0 = qd::quick_two_sum(c3, c4, c4);
   s0 = qd::quick_two_sum(c2, s0, c3);

@@ -50,19 +50,4 @@
    version of division. */
 #cmakedefine01 QD_SLOPPY_DIV
 
-/* Define this macro to be the isfinite(x) function. */
-#ifndef QD_ISFINITE
-#define QD_ISFINITE @QD_ISFINITE@
-#endif
-
-/* Define this macro to be the isinf(x) function. */
-#ifndef QD_ISINF
-#define QD_ISINF @QD_ISINF@
-#endif
-
-/* Define this macro to be the isnan(x) function. */
-#ifndef QD_ISNAN
-#define QD_ISNAN @QD_ISNAN@
-#endif
-
 #endif /* _QD_QD_CONFIG_H */

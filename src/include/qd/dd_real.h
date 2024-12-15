@@ -97,9 +97,9 @@ struct QD_API dd_real {
   static const dd_real _safe_max;
   static const int _ndigits;
 
-  bool isnan() const { return QD_ISNAN(x[0]) || QD_ISNAN(x[1]); }
-  bool isfinite() const { return QD_ISFINITE(x[0]); }
-  bool isinf() const { return QD_ISINF(x[0]); }
+  bool isnan() const { return std::isnan(x[0]) || std::isnan(x[1]); }
+  bool isfinite() const { return std::isfinite(x[0]); }
+  bool isinf() const { return std::isinf(x[0]); }
 
   static dd_real add(double a, double b);
   static dd_real ieee_add(const dd_real &a, const dd_real &b);

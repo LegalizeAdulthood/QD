@@ -24,7 +24,7 @@ using std::setw;
 int get_double_expn(double x) {
   if (x == 0.0)
     return std::numeric_limits<int>::min();
-  if (QD_ISINF(x) || QD_ISNAN(x))
+  if (std::isinf(x) || std::isnan(x))
     return std::numeric_limits<int>::max();
 
   double y = std::abs(x);
@@ -51,7 +51,7 @@ void print_double_info(std::ostream &os, double x) {
   os << std::scientific;
 
   os << setw(27) << x << ' ';
-  if (QD_ISNAN(x) || QD_ISINF(x) || (x == 0.0)) {
+  if (std::isnan(x) || std::isinf(x) || (x == 0.0)) {
     os << "                                                           ";
   } else {
 

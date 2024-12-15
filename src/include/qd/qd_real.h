@@ -74,8 +74,8 @@ struct QD_API qd_real {
   static void error(const char *msg);
 
   bool isnan() const;
-  bool isfinite() const { return QD_ISFINITE(x[0]); }
-  bool isinf() const { return QD_ISINF(x[0]); }
+  bool isfinite() const { return std::isfinite(x[0]); }
+  bool isinf() const { return std::isinf(x[0]); }
 
   static qd_real ieee_add(const qd_real &a, const qd_real &b);
   static qd_real sloppy_add(const qd_real &a, const qd_real &b);

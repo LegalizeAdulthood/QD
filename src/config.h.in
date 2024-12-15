@@ -118,21 +118,6 @@
 /* Define to 1 to inline commonly used functions. */
 #cmakedefine01 QD_INLINE
 
-/* Define this macro to be the isfinite(x) function. */
-#ifndef QD_ISFINITE
-#define QD_ISFINITE @QD_ISFINITE@
-#endif
-
-/* Define this macro to be the isinf(x) function. */
-#ifndef QD_ISINF
-#define QD_ISINF @QD_ISINF@
-#endif
-
-/* Define this macro to be the isnan(x) function. */
-#ifndef QD_ISNAN
-#define QD_ISNAN @QD_ISNAN@
-#endif
-
 /* Define to 1 to use sloppy division (which is faster by slightly
    inaccurate). */
 #cmakedefine01 QD_SLOPPY_DIV
