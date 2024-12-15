@@ -11,7 +11,6 @@
  * control word of a x86 FPU.
  */
 
-#include <cfenv>
 #include <qd/config.h>
 #include <qd/fpu.h>
 
