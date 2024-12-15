@@ -10,33 +10,16 @@
  * Contains function used for timing.
  */
 
-#ifndef TICTOC_H__
-#define TICTOC_H__
+#ifndef TICTOC_H
+#define TICTOC_H
 
-#include <qd/config.h>
+#include <chrono>
 
-#ifdef _WIN32
-
-#include <windows.h>
-typedef DWORD tictoc;
-#else
-
-#ifdef HAVE_CLOCK_GETTIME
-#include <time.h>
-typedef struct timespec tictoc;
-#else
-
-#ifdef HAVE_GETTIMEOFDAY
-#include <sys/time.h>
-typedef struct timeval tictoc;
-#else
-#include <ctime>
-typedef time_t tictoc;
-#endif
-
-#endif
-
-#endif
+struct tictoc
+{
+  using clock_type = std::chrono::high_resolution_clock;
+  std::chrono::time_point<clock_type> start;
+};
 
 void   tic(tictoc *tv);   /* start timing. */
 double toc(tictoc *tv);   /* stop  timing. */
